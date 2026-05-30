@@ -126,7 +126,7 @@ export const content: Record<Language, Content> = {
             ariaLabel: 'Conhecer Espigão d’Oeste na Wikipédia',
           },
           {
-            text: ', no interior de Rondônia, em uma realidade onde o acesso à tecnologia era limitado, mas a curiosidade sempre esteve presente. Antes de ter um computador de verdade, eu tentava imaginar e construir os meus com pedaços de cerâmica que sobravam das construções do meu pai. Na época, era brincadeira e imaginação; hoje, vejo que já existia ali uma vontade de entender como as coisas funcionavam e criar algo a partir do que eu tinha disponível.',
+            text: ', no interior de Rondônia, cercado pela Floresta Amazônica, em uma realidade onde o acesso à tecnologia era limitado, mas a curiosidade sempre esteve presente. Antes de ter um computador de verdade, eu tentava imaginar e construir os meus com pedaços de cerâmica que sobravam das construções do meu pai. Na época, era brincadeira e imaginação; hoje, vejo que já existia ali uma vontade de entender como as coisas funcionavam e criar algo a partir do que eu tinha disponível.',
           },
         ],
         'Com o tempo, essa curiosidade se tornou caminho. Foi por meio da tecnologia que ampliei possibilidades, saí de um contexto distante dos grandes centros e oportunidades, estudei Engenharia de Software na Universidade Federal do Pampa e construí minha trajetória profissional na área de dados e tecnologia. Nesse percurso, entendi o impacto da tecnologia não apenas como ferramenta técnica, mas como meio para abrir caminhos, resolver problemas e transformar realidades.',
@@ -357,7 +357,7 @@ export const content: Record<Language, Content> = {
             ariaLabel: 'Learn about Espigão d’Oeste on Wikipedia',
           },
           {
-            text: ', Rondônia, in a reality closely connected to rural life, where access to technology was limited but always meaningful. Even before I had access to a real computer, I tried to build my own using leftover materials from my father’s construction work. At the time it was imagination and curiosity; today I see there was already a desire to understand how things worked, connect pieces and create something from what I had available.',
+            text: ', Rondônia, surrounded by the Amazon rainforest, in a reality closely connected to rural life, where access to technology was limited but always meaningful. Even before I had access to a real computer, I tried to build my own using leftover materials from my father’s construction work. At the time it was imagination and curiosity; today I see there was already a desire to understand how things worked, connect pieces and create something from what I had available.',
           },
         ],
         'Over time, that curiosity became more than fascination; it became a path. Technology helped me expand possibilities, move from a context far from large technology centers, study Software Engineering at the Federal University of Pampa and build a professional career in the field. That was when I understood, in a very concrete way, the impact technology can have: not only as a technical tool, but as something capable of opening paths, changing realities and taking people, ideas and organizations to places that once felt distant.',

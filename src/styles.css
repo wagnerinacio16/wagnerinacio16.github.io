@@ -466,11 +466,10 @@ a {
 
 .inline-origin-link {
   position: relative;
-  display: inline-block;
   color: var(--accent-3);
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(154, 223, 255, 0.45);
+  border-bottom: 1px solid transparent;
   cursor: pointer;
   transition:
     color 180ms ease,
@@ -478,39 +477,17 @@ a {
     text-shadow 180ms ease;
 }
 
-.inline-origin-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-2), transparent);
-  opacity: 0;
-  transform: scaleX(0.35);
-  transform-origin: center;
-  transition:
-    opacity 180ms ease,
-    transform 220ms ease;
-}
-
 .inline-origin-link:hover,
 .inline-origin-link:focus-visible {
   color: var(--text);
-  border-color: rgba(0, 194, 255, 0.85);
-  text-shadow: 0 0 14px rgba(0, 194, 255, 0.28);
-}
-
-.inline-origin-link:hover::after,
-.inline-origin-link:focus-visible::after {
-  opacity: 1;
-  transform: scaleX(1);
+  border-bottom-color: rgba(0, 194, 255, 0.75);
+  text-shadow: 0 0 12px rgba(0, 194, 255, 0.22);
 }
 
 .inline-origin-link:focus-visible {
-  outline: 2px solid rgba(0, 194, 255, 0.45);
-  outline-offset: 3px;
-  border-radius: 3px;
+  outline: 1px solid rgba(0, 194, 255, 0.35);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .results-section {

@@ -262,7 +262,19 @@ function App() {
           </div>
           <div className="about-copy">
             {data.about.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={typeof paragraph === 'string' ? paragraph : paragraph.map((segment) => segment.text).join('')}>
+                {typeof paragraph === 'string'
+                  ? paragraph
+                  : paragraph.map((segment) =>
+                      segment.href ? (
+                        <a key={segment.text} href={segment.href} target="_blank" rel="noreferrer">
+                          {segment.text}
+                        </a>
+                      ) : (
+                        segment.text
+                      ),
+                    )}
+              </p>
             ))}
           </div>
         </section>

@@ -9,6 +9,8 @@ export type Project = {
   url: string;
 };
 
+export type AboutParagraph = string | Array<{ text: string; href?: string }>;
+
 export type Content = {
   nav: {
     about: string;
@@ -34,7 +36,7 @@ export type Content = {
   about: {
     title: string;
     eyebrow: string;
-    paragraphs: string[];
+    paragraphs: AboutParagraph[];
   };
   impact: {
     title: string;
@@ -112,11 +114,23 @@ export const content: Record<Language, Content> = {
     },
     about: {
       eyebrow: 'Sobre mim',
-      title: 'Quem sou eu',
+      title: 'Quem sou eu?',
       paragraphs: [
-        'Minha relação com tecnologia começou muito antes de eu entender exatamente o que ela era. Cresci em Espigão d’Oeste, Rondônia, em uma realidade muito ligada à zona rural, onde o contato com tecnologia era limitado, mas sempre marcante. Antes mesmo de ter acesso a um computador de verdade, eu já tentava construir os meus com restos de materiais que sobravam das construções do meu pai. Na época, era imaginação e curiosidade; hoje, vejo que já existia ali uma vontade de entender como as coisas funcionavam, conectar peças e criar algo a partir do que eu tinha disponível.',
-        'Com o tempo, essa curiosidade deixou de ser apenas fascínio e se tornou caminho. Foi por meio da tecnologia que consegui ampliar possibilidades, sair de um contexto distante dos grandes centros, estudar Engenharia de Software na Universidade Federal do Pampa e construir uma trajetória profissional na área. Talvez tenha sido aí que entendi, de forma muito concreta, o impacto que a tecnologia pode ter: não apenas como ferramenta técnica, mas como algo capaz de abrir caminhos, mudar realidades e levar pessoas, ideias e organizações a lugares que antes pareciam distantes.',
-        'Hoje, atuo como Engenheiro de Dados & Analytics, combinando uma base em engenharia de software com experiência em ciência de dados, analytics, produtos de dados e soluções para áreas de negócio. Gosto especialmente da área de dados porque ela conecta tecnologia com contexto, decisão e impacto. Este portfólio reúne projetos, estudos e experimentos que refletem minha evolução, minha curiosidade e minha forma de enxergar tecnologia como uma ponte entre realidade, oportunidade e transformação.',
+        [
+          {
+            text: 'Minha relação com tecnologia começou ainda na infância, antes mesmo de eu entender exatamente o que ela significava. Cresci na zona rural de ',
+          },
+          {
+            text: 'Espigão d’Oeste',
+            href: 'https://pt.wikipedia.org/wiki/Espig%C3%A3o_d%27Oeste',
+          },
+          {
+            text: ', no interior de Rondônia, em uma realidade onde o acesso à tecnologia era limitado, mas a curiosidade sempre esteve presente. Antes de ter um computador de verdade, eu tentava imaginar e construir os meus com pedaços de cerâmica que sobravam das construções do meu pai. Na época, era brincadeira e imaginação; hoje, vejo que já existia ali uma vontade de entender como as coisas funcionavam e criar algo a partir do que eu tinha disponível.',
+          },
+        ],
+        'Com o tempo, essa curiosidade se tornou caminho. Foi por meio da tecnologia que ampliei possibilidades, saí de um contexto distante dos grandes centros e oportunidades, estudei Engenharia de Software na Universidade Federal do Pampa e construí minha trajetória profissional na área de dados e tecnologia. Nesse percurso, entendi o impacto da tecnologia não apenas como ferramenta técnica, mas como meio para abrir caminhos, resolver problemas e transformar realidades.',
+        'Meu interesse por dados nasceu em uma aula de introdução à análise de dados, ao trabalhar com datasets e ferramentas para transformar informação bruta em algo estruturado, visual e compreensível. Na época, analisei indicadores de violência doméstica no Rio Grande do Sul e foi ali que percebi como dados bem trabalhados podem revelar padrões e dar clareza sobre diferentes contextos.',
+        'Hoje, atuo como Engenheiro de Dados & Analytics, combinando base em engenharia de software com experiência em ciência de dados, analytics e produtos de dados. Este portfólio reúne um pouco da minha trajetória e projetos que refletem minha evolução técnica, minha curiosidade e minha forma de enxergar tecnologia e dados como instrumentos para estruturar problemas, gerar informação confiável e construir soluções com impacto.',
       ],
     },
     impact: {
@@ -130,7 +144,7 @@ export const content: Record<Language, Content> = {
         },
         {
           value: 'Pipelines críticos',
-          label: 'Sustentação de esteiras e indicadores usados em ciclos executivos.',
+          label: 'Sustentação de esteiras e indicadores usados em ciclos executivos na maior empresa de alimentos do mundo.',
         },
         {
           value: 'Produtos de dados',
@@ -330,7 +344,7 @@ export const content: Record<Language, Content> = {
     },
     about: {
       eyebrow: 'About',
-      title: 'Who I am',
+      title: 'Who am I?',
       paragraphs: [
         'My relationship with technology started long before I fully understood what it was. I grew up in Espigão d’Oeste, Rondônia, in a reality closely connected to rural life, where access to technology was limited but always meaningful. Even before I had access to a real computer, I tried to build my own using leftover materials from my father’s construction work. At the time it was imagination and curiosity; today I see there was already a desire to understand how things worked, connect pieces and create something from what I had available.',
         'Over time, that curiosity became more than fascination; it became a path. Technology helped me expand possibilities, move from a context far from large technology centers, study Software Engineering at the Federal University of Pampa and build a professional career in the field. That was when I understood, in a very concrete way, the impact technology can have: not only as a technical tool, but as something capable of opening paths, changing realities and taking people, ideas and organizations to places that once felt distant.',
@@ -348,7 +362,7 @@ export const content: Record<Language, Content> = {
         },
         {
           value: 'Critical pipelines',
-          label: 'Operation of workflows and indicators used in executive cycles.',
+          label: 'Operation of data pipelines and indicators used in executive business cycles at the world’s largest food company.',
         },
         {
           value: 'Data products',

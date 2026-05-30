@@ -267,7 +267,14 @@ function App() {
                   ? paragraph
                   : paragraph.map((segment) =>
                       segment.href ? (
-                        <a key={segment.text} href={segment.href} target="_blank" rel="noreferrer">
+                        <a
+                          className="inline-origin-link"
+                          key={segment.text}
+                          href={segment.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={segment.ariaLabel}
+                        >
                           {segment.text}
                         </a>
                       ) : (
